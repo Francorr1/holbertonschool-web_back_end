@@ -7,4 +7,4 @@ def update_topics(mongo_collection, name, topics):
     """ Updates topics """
     query = {"name": name}
     values = {"$set": {"topics": topics}}
-    return mongo_collection.updateMany(query, values)
+    return mongo_collection.update_Many(query, values)
